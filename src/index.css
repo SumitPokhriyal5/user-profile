@@ -1,6 +1,8 @@
 body {
+  background-color: #7052ff;
+}
+* {
   margin: 0;
   padding: 0;
   font-family: arial;
-  background-color: #7052ff;
 }
