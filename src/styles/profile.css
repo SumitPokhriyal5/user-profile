@@ -67,3 +67,27 @@
     opacity: 0.6;
     font-size: 12px;
 }
+
+/* tabs section */
+.tabContainer {
+    width: 90%;
+    margin: auto;
+}
+.tabButtons {
+    width: 100%;
+    /* border: 1px solid; */
+}
+.tabButtons > button {
+    width: 33.33%;
+    border: none;
+    background-color: #fff;
+    padding: 10px 0;
+    font-weight: 600;
+    opacity: 0.5;
+}
+
+.activeTab {
+    border-bottom: 2px solid #7052ff !important;
+    color: #7052ff;
+    opacity: 1 !important;
+}
