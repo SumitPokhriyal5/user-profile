@@ -1,7 +1,7 @@
-.profilePage {
-    /* background-color: #7052ff; */
-    border: 1px solid red;
-}
+/* .profilePage {
+    background-color: #7052ff; */
+    /* border: 1px solid red;
+} */
 
 .profilePage > h1 {
     color: #fff;
@@ -13,7 +13,7 @@
     width: 90%;
     margin: auto;
     background-color: #fff;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin-top: 100px;
     border-radius: 10px 10px 0 0;
     display: flex;
@@ -45,7 +45,7 @@
 
 /* user achivement section */
 .userAchievementContainer {
-    border: 1px solid;
+    /* border: 1px solid; */
     width: 90%;
     margin: auto;
     margin-bottom: 0;
