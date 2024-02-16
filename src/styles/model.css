@@ -19,7 +19,7 @@
     padding: 20px 20px 40px 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
-    width: 85%;
+    width: 320px;
     animation: celebrationAnimation 1s ease-in-out;
   }
 
