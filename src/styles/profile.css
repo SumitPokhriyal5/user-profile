@@ -1,0 +1,31 @@
+.profilePage {
+    /* background-color: #7052ff; */
+    border: 1px solid red;
+}
+
+.profilePage > h1 {
+    
+}
+
+.profilePage > div {
+    width: 90%;
+    margin: auto;
+    background-color: #fff;
+    border: 1px solid black;
+    margin-top: 100px;
+}
+
+.userAvatarBox {
+    width: 100px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: -50px;
+}
+
+.userAvatarBox > img {
+    width: 98%;
+}

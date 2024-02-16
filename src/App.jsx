@@ -1,7 +1,10 @@
+import Profile from "./pages/Profile"
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <Profile />
+    </div>
   )
 }
 
