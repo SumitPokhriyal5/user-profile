@@ -7,6 +7,7 @@ const Profile = () => {
     const [profileData, setProfileData] = useState({});
     const [pointsAndLevel, setPointsAndLevel] = useState({});
     const [rank, setRank] = useState("");
+    const [badges, setBadges] = useState([])
     const [activeTab, setActiveTab] = useState("PointHistory");
 
     const handleTabChange = (tabName) => {
@@ -74,10 +75,27 @@ const Profile = () => {
               console.error('Error fetching points and level data:', error);
             }
         };
-    
+
+        const fetchBadges = async () => {
+            try {
+              const response = await fetch(`${apiCredentials.url}/api/entities/${apiCredentials.entityId}/users/${apiCredentials.userId}/badges`, {
+                  headers
+              });
+              if (!response.ok) {
+                throw new Error('Failed to fetch points and level data');
+              }
+              const data = await response.json();
+              setBadges(data.data);
+            } catch (error) {
+              console.error('Error fetching points and level data:', error);
+            }
+        };
+
+        
         fetchProfileData();
         fetchPointsAndLevel();
         fetchRank();
+        fetchBadges()
       }, [])
     //   console.log('Rank data', rank)
   return (
@@ -100,7 +118,7 @@ const Profile = () => {
                 <button className={activeTab === "PointHistory" ? "activeTab" : ""} onClick={() => handleTabChange("PointHistory")}>Point History</button>
             </div>
             <div className="tabContent">
-                {activeTab === "Badges" && <BadgesTab apiCredentials={apiCredentials} headers={headers} />}
+                {activeTab === "Badges" && <BadgesTab badges={badges} />}
                 {activeTab === "PointHistory" && <PointHistoryTab />}
             </div>
             </div>
