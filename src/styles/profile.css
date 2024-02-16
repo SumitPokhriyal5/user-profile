@@ -4,7 +4,9 @@
 }
 
 .profilePage > h1 {
-    
+    color: #fff;
+    text-align: center;
+    margin-top: 60px;
 }
 
 .profilePage > div {
@@ -13,6 +15,11 @@
     background-color: #fff;
     border: 1px solid black;
     margin-top: 100px;
+    border-radius: 10px;
+}
+
+.profilePage > div > h2 {
+    text-align: center;
 }
 
 .userAvatarBox {
