@@ -113,3 +113,27 @@
 .badgesContainer > div > img {
     width: 100%;
 }
+
+
+/* Skeleton loading styles */
+.skeletonLoading {
+    background-color: #f3f3f3; /* Light gray background */
+    width: 100%;
+    height: 20px; /* Adjust the height as needed */
+    border-radius: 5px;
+}
+
+.loadingSkeleton .userAvatarBox {
+    width: 100px;
+    height: 100px; /* Adjust the height as needed */
+}
+
+.loadingSkeleton .userAchievementContainer > div {
+    width: 31%;
+    height: 100px; /* Adjust the height as needed */
+}
+
+.loadingSkeleton .tabButtons > button {
+    width: 33.33%;
+    height: 40px; /* Adjust the height as needed */
+}

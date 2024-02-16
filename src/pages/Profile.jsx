@@ -2,17 +2,12 @@ import { useEffect, useState } from "react";
 import '../styles/profile.css'
 import AchivementBox from "../components/AchivementBox";
 import BadgesTab from "../components/BadgesTab";
-import PointHistoryTab from "../components/PointHistoryTab";
 const Profile = () => {
     const [profileData, setProfileData] = useState({});
     const [pointsAndLevel, setPointsAndLevel] = useState({});
     const [rank, setRank] = useState("");
     const [badges, setBadges] = useState([])
-    const [activeTab, setActiveTab] = useState("PointHistory");
-
-    const handleTabChange = (tabName) => {
-        setActiveTab(tabName);
-    };
+   
     const apiCredentials = {
         url: "https://staging.questprotocol.xyz",
         userId: "u-a2399489-9cd0-4c94-ad12-568379202b08",
@@ -91,11 +86,10 @@ const Profile = () => {
             }
         };
 
-        
         fetchProfileData();
         fetchPointsAndLevel();
         fetchRank();
-        fetchBadges()
+        fetchBadges();
       }, [])
     //   console.log('Rank data', rank)
   return (
@@ -114,12 +108,11 @@ const Profile = () => {
             <div className="tabContainer">
             <div className="tabButtons">
                 <button >Membership</button>
-                <button className={activeTab === "Badges" ? "activeTab" : ""} onClick={() => handleTabChange("Badges")}>Badges</button>
-                <button className={activeTab === "PointHistory" ? "activeTab" : ""} onClick={() => handleTabChange("PointHistory")}>Point History</button>
+                <button className="activeTab" >Badges</button>
+                <button >Point History</button>
             </div>
             <div className="tabContent">
-                {activeTab === "Badges" && <BadgesTab badges={badges} />}
-                {activeTab === "PointHistory" && <PointHistoryTab />}
+                <BadgesTab badges={badges} />
             </div>
             </div>
         </div>

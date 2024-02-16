@@ -18,7 +18,7 @@ const Model = ({setModalVisible, badge, modalVisible}) => {
               &times;
             </span>
             <div>
-              <img src={badge?.imageUrl} alt={badge.name} />
+              <img src={badge?.imageUrl} alt={badge?.name} />
               <h2>Badge Unlocked! 🌟</h2>
               <p>🎉 Level Up! Earned a shiny new badge! 🥇✨</p>
             </div>
