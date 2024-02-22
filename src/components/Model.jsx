@@ -4,9 +4,9 @@ import Confetti from "react-confetti";
 const Model = ({setModalVisible, badge, modalVisible}) => {
     useEffect(() => {
         const modalElement = document.querySelector(".modal");
-        modalElement.classList.add("celebration"); // Add celebration class to trigger the animation
+        modalElement.classList.add("celebration"); 
         return () => {
-            modalElement.classList.remove("celebration"); // Remove celebration class when modal is closed
+            modalElement.classList.remove("celebration"); 
         };
     }, []);
     
